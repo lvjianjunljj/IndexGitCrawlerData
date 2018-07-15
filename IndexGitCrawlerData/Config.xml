@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Configuration>
+  <DBserver>STCVM-H03</DBserver>
+  <DBName>Crawler</DBName>
+  <DBUID>sa</DBUID>
+  <DBPWD>123456Abcd</DBPWD>
+  <TableName>CrawlerGitDetailData</TableName>
+  <IndexLineCountMax>10000</IndexLineCountMax>
+  <GetFromDBRankDefaultColumn>-impressionCount,-clickCount,id</GetFromDBRankDefaultColumn>
+  <DownloadWaitTime>45</DownloadWaitTime>
+  <LogDir>.\log</LogDir>
+</Configuration>

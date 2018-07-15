@@ -1,0 +1,67 @@
+﻿<Window x:Class="IndexGitCrawlerData.ShowIndexData"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:IndexGitCrawlerData"
+        mc:Ignorable="d"
+        Title="ShowIndexData" Height="1000" Width="1700" ResizeMode="NoResize"  Closed="MainWindow_Closed">
+    <Grid>
+        <TextBlock Margin="0,0,1500,925" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center" >repositoryPath:</TextBlock>
+        <TextBox   Margin="200,10,100,920" FontSize="15" BorderThickness="0" IsReadOnly="True" Name="repositoryPath"/>
+        <TextBlock Margin="0,60,1500,865" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center">downloadURL:</TextBlock>
+        <TextBox   Margin="200,70,100,860" FontSize="15" BorderThickness="0" IsReadOnly="True" Name="downloadURL"/>
+        <TextBlock Margin="0,120,1500,805" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center">repositoryContent:</TextBlock>
+        <TextBox   Margin="200,130,10,770" FontSize="15" BorderThickness="1" IsReadOnly="True" Name="repositoryContent" TextWrapping="Wrap" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Auto" />
+        <TextBlock Margin="0,210,1500,715" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center">topicsList:</TextBlock>
+        <TextBox   Margin="200,220,10,680" FontSize="15" BorderThickness="1" IsReadOnly="True" Name="topicsList" TextWrapping="Wrap" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Auto" />
+        <TextBlock Margin="0,320,1500,605" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center">impressionCount:</TextBlock>
+        <TextBox   Margin="200,330,1350,600" FontSize="15" BorderThickness="0" IsReadOnly="True" Name="impressionCount"/>
+        <TextBlock Margin="555,320,1015,605" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center">clickCount:</TextBlock>
+        <TextBox   Margin="700,330,850,600" FontSize="15" BorderThickness="0" IsReadOnly="True" Name="clickCount"/>
+        <TextBlock Margin="0,380,1500,545" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center">readmeFileContent:</TextBlock>
+        <TextBox   Margin="200,390,10,110" FontSize="15" BorderThickness="1" IsReadOnly="True" Name="readmeFileContent" TextWrapping="Wrap" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Auto" />
+
+        <TextBox   Margin="1230,880,50,55" FontSize="18" BorderThickness="0" IsReadOnly="True" VerticalAlignment="Center" HorizontalAlignment="Center" Name="pageIndexContent" />
+        <TextBox   Margin="300,880,50,50" FontSize="18" BorderThickness="0" IsReadOnly="True" VerticalAlignment="Center" HorizontalAlignment="Center" Name="downloadInfo" />
+        <TextBox   Margin="700,880,50,50" FontSize="18" BorderThickness="0" IsReadOnly="True" VerticalAlignment="Center" HorizontalAlignment="Center" Name="timeCost" />
+
+        <Button    Margin="1600,10,45,920" Click="Copy_RepositoryPath" Cursor="Hand">
+            <Button.Template>
+                <ControlTemplate>
+                    <Grid>
+                        <Image Margin="2" Source="./icon/copy.png"/>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button    Margin="1600,70,45,860" Click="Copy_DownloadURL"  Cursor="Hand">
+            <Button.Template>
+                <ControlTemplate>
+                    <Grid>
+                        <Image Margin="2" Source="./icon/copy.png"/>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button Margin="1320,875,315,50" Click="Index_Left"  Cursor="Hand">
+            <Button.Template>
+                <ControlTemplate>
+                    <Grid>
+                        <Image Margin="2" Source="./icon/left.png"/>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button Margin="1495,875,140,50"  Click="Index_Right"  Cursor="Hand">
+            <Button.Template>
+                <ControlTemplate>
+                    <Grid>
+                        <Image Margin="2" Source="./icon/right.png"/>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button Content="Download Zip" FontSize="25" HorizontalAlignment="Left" VerticalAlignment="Top" Width="180" Height="50" Margin="626,881,0,0" Click="Download_Zip"  Cursor="Hand"/>
+    </Grid>
+</Window>
